@@ -1,0 +1,34 @@
+# キャッシュ・データ・モデルファイルを無視
+cache/*
+!cache/.gitkeep
+
+data/*
+!data/.gitkeep
+
+
+*.ckpt
+*.pth
+*.pt
+*.h5
+*.npz
+*.npy
+*.pkl
+*.joblib
+
+# Python関連
+__pycache__/
+*.pyc
+*.pyo
+
+# Jupyter Notebookのチェックポイント
+.ipynb_checkpoints/
+
+# その他
+.DS_Store
+*.log
+
+# ローカル環境
+.venv/
+
+# HiFi-GANの重みはSpolacq-GDSから取得する（READMEを参照）
+agents/sample01/models/U2S/m2s/g_02500000

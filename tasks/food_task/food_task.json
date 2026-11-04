@@ -1,0 +1,34 @@
+{
+  "initial_scene_id": 0,
+  "items": [
+    {
+      "id": 1,
+      "name": "apple",
+      "prompt": "A red apple on a white background, uncooked, realistic",
+      "attributes": {
+        "color": "red",
+        "taste": "sweet"
+      }
+    }
+  ],
+  "scenes": [
+    {
+      "id": 0,
+      "name": "Learning Session",
+      "role_description": "a teacher evaluating the student's knowledge of food attributes",
+      "speaker_description": "Laura's voice is calm and slightly slow in delivery, with a very close recording that almost has no background noise.",
+      "items": [1],
+      "possible_next_scenes": [1],
+      "system_guidelines": "Guidelines:\nBased on 'Teacher's Question' and 'Child's Answer', evaluate the response based on the Multiple Valid Templates rule:\n\n## Evaluation Rules (Flexible Template Mapping)\nSet 'response_quality' to 1 if and only if the answer follows one of the valid templates for the question type AND uses the correct attribute value (color/taste) for the current item. Otherwise, set it to 0.\n\n### Scoring Table:\n| Teacher's Question | Valid Answer Templates (Any of these) | Required Attribute |\n| :--- | :--- | :--- |\n| What is this color? | 1. This {name} looks {color}.<br>2. This is {color} {name}<br>3. I think this {name} is {color}.<br>4. This is {color}.<br>5. {color}. | color |\n| How does it taste? | 1. I think this {name} is {taste}.<br>2. {name} is {taste}.<br>3. This {name} is very {taste}.<br>4. {taste}.<br>5. This is {taste}. | taste |\n\n### Strictness Criteria:\n1. **Template Matching**: The answer must match ONE of the 'Valid Answer Templates' for that specific question.\n2. **Conditional Inclusion**: If the chosen template includes {name}, it must be correct. If the template (like '{color}.') does not include {name}, only the correct attribute is required.\n3. **Attribute Accuracy**: The value provided in {color} or {taste} must exactly match the JSON 'attributes' for the current item.\n4. **Robustness**: Ignore case sensitivity and trailing punctuation (e.g., periods/commas).\n5. **Failure Cases**: If the wrong attribute is used, the template structure is significantly broken, or the answer is empty, 'response_quality' MUST be 0.\n\n## Dialogue Flow\n- **If Child provides no response**: Quality = 0, stay in Scene 0, encourage the child.\n- **If Child provides any response**: Assign Quality (0 or 1), provide warm feedback as Laura, and transition to Scene 1."
+    },
+    {
+      "id": 1,
+      "name": "Stop",
+      "role_description": "a parent concluding the lesson",
+      "speaker_description": "Laura's voice is calm and slightly slow in delivery, with a very close recording that almost has no background noise.",
+      "items": [1],
+      "possible_next_scenes": [1],
+      "system_guidelines": "Praise the child for their good work and end the conversation."
+    }
+  ]
+}

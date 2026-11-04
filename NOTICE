@@ -1,0 +1,52 @@
+This project is a modified version of Spolacq-GDS.
+
+Spolacq-GDS
+Copyright (C) 2025- Shinozaki Lab Science Tokyo
+Licensed under the Apache License, Version 2.0
+https://github.com/tttslab/spolacq
+
+Modifications
+Copyright (C) 2025-2026 yusshimi
+Licensed under the Apache License, Version 2.0
+
+Third-party code included under agents/sample01/tools/ and
+agents/sample01/models/ remains under its own license. See the LICENSE
+file in each directory. agents/sample01/utils/sb3_api.py is derived from
+Stable-Baselines3 (MIT License); its notice is at the top of the file.
+
+Files changed from the code base used for this project:
+
+  agents/sample01/agent.py
+  agents/sample01/trainer.py
+  agents/sample01/utils/sb3_api.py
+  env/create_audio_dataset.py
+  env/data_logger.py
+  env/data_models.py
+  env/dialogue_simulator.py
+  env/generative_models.py
+  env/prompts/food_task.txt
+  env/utils.py
+  experiments/food_task.yaml
+  main.py
+  tasks/food_task/food_task.json
+  tasks/food_task/food_task_prompt.json
+  tasks/food_task/task_functions.py
+  tasks/food_task/task_wrappers.py
+  tasks/food_task/utterance_patterns.json
+
+Files added:
+
+  agents/sample01/utils/callbacks.py
+  scripts/summarize_rewards.py
+
+Files removed from the code base used for this project:
+
+  tasks/food_corner_task/
+  tasks/food_task_number/
+  experiments/food_corner_task.yaml
+  agents/sample01/tools/I2U/log_train_i2u.txt
+  agents/sample01/tools/U2S/log_preprocess_u2s.txt
+  agents/sample01/tools/U2S/log_train_u2s.txt
+  agents/sample01/models/U2S/m2s/g_02500000 (download it from Spolacq-GDS)
+
+The Spolacq-GDS README files were moved to docs/spolacq-gds/.

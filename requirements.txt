@@ -1,0 +1,16 @@
+PyYAML
+gymnasium
+diffusers
+pydub
+scipy
+ffmpeg-python
+librosa
+parler_tts
+# transformers
+torch
+phonemizer
+resampy
+unidecode
+inflect
+h5py
+PEFT

@@ -1,0 +1,21 @@
+{
+  "scene": {
+    "Learning session": "food"
+  },
+  "food": [
+    "This {name} looks {color}.",
+    "This is {color} {name}.",
+    "I think this {name} is {color}.",
+    "I think this {name} is {taste}.",
+    "{name} is {taste}.",
+    "This {name} is very {taste}."
+  ],
+  "else": [
+    "This {name} looks {color}.",
+    "This is {color} {name}.",
+    "I think this {name} is {color}.",
+    "I think this {name} is {taste}.",
+    "{name} is {taste}.",
+    "This {name} is very {taste}."
+  ]
+}
